@@ -1,0 +1,95 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root{
+	font-size: 18px;
+	--main-color-form: #fff;
+}
+
+@font-face{
+	font-family: "Poppins";
+	src: url("../font/poppins.ttf") format("ttf");
+}
+
+body{
+	background-color: #1C1C1C;
+	font-family: "Poppins", Sans-Serif;
+	margin: 200px 0;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	border: .5px solid #3B3B3B;
+	width: 85vw;
+	margin: 0 auto;
+	padding: 10px;
+	font-size: 1rem;
+	border-radius: 8px;
+	gap: 3px;
+	color: #D1D1D1;
+}
+
+h2{
+	color: #fff;
+	text-align: center;
+}
+
+.hr{
+	border-color: #3B3B3B;
+	margin-bottom: 10px;
+}
+
+.label-form{
+	font-size: .9rem;
+}
+
+.input-form{
+	height: 2rem;
+	border-radius: 5px;
+	padding: 0 5px;
+	margin-bottom: 10px;
+	background-color: #242424;
+	outline: none;
+	border: 1px solid #1A1A1A;
+	color: #fff;
+}
+.input-form:focus{
+	border: 1px solid #404040;
+}
+
+#label-checkbox{
+	margin-bottom: 20px;
+	margin-left: 2px;
+	display: flex;
+	gap: 4px;
+	font-size: .8rem;
+	align-items: center;
+}
+
+/* input[type="checkbox"]{
+	-webkit-appearance: none;
+	background-color: none;
+	border: 1px solid #3B3B3B;
+	border-radius: 5px;
+	height: 18px;
+	width: 18px;
+}
+input[type="checkbox"]:checked{
+	background-color: #0069FF;
+} */
+
+#submit{
+	background-color: #0069FF;
+	color: #E3E3E3;
+	font-size: 1rem;
+}
+
+@media (min-width: 600px){
+	form{
+		max-width: 30rem;
+	}
+}
