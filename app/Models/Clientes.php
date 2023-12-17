@@ -7,6 +7,14 @@ use CodeIgniter\Model;
 class Clientes extends Model
 {
     protected $table = 'clientes';
+    protected $protectFields = false;
+
+    protected $validationRules = [
+        'email' => [
+            'label' => 'email',
+            'rules' => 'required|is_unique[clientes.email]'
+        ]
+        ];
 
     public function getByEmail(string $email)
     {
@@ -16,5 +24,10 @@ class Clientes extends Model
         }else{
             return null;
         }
+    }
+
+    public function cadastrar($data)
+    {   
+        return 'implementar';
     }
 }
