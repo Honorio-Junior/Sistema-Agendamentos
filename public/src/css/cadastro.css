@@ -17,6 +17,7 @@
 body{
 	background-color: #1C1C1C;
 	font-family: "Poppins", Sans-Serif;
+	margin-top: 120px;
 }
 
 form{
@@ -24,7 +25,7 @@ form{
 	flex-direction: column;
 	border: .5px solid #3B3B3B;
 	width: 85vw;
-	margin: 100px auto 0 auto;
+	margin: 0 auto 0 auto;
 	padding: 10px;
 	font-size: 1rem;
 	border-radius: 8px;

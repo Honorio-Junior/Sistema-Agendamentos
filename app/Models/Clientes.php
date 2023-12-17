@@ -9,13 +9,6 @@ class Clientes extends Model
     protected $table = 'clientes';
     protected $protectFields = false;
 
-    protected $validationRules = [
-        'email' => [
-            'label' => 'email',
-            'rules' => 'required|is_unique[clientes.email]'
-        ]
-        ];
-
     public function getByEmail(string $email)
     {
         $cliente = $this->where('email', $email)->first();
@@ -28,6 +21,15 @@ class Clientes extends Model
 
     public function cadastrar($data)
     {   
-        return 'implementar';
+
+        $this->insert($data);
+
+        $error = $this->db->error();
+
+        if(empty($error['code'])){
+            return true;
+        }else{
+            return $error;
+        }
     }
 }

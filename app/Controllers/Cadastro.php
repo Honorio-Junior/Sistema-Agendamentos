@@ -19,6 +19,11 @@ class Cadastro extends BaseController
     $post = $this->request->getPost();
     $post['senha'] = password_hash($post['senha'], PASSWORD_DEFAULT);
     $result = $modelClientes->cadastrar($post);
-    var_dump($result);
+
+    if($result === true){
+      return view('cadastro');
+    }else{
+      return view('cadastro', ['error' => $result['message']]);
+    }
   }
 }
